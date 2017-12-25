@@ -43,3 +43,4 @@ server {
 ![404 Error Page](screenshots/screenshot-2.png)
 
 ### 418 - I'm a Teapot
+![418 Error Page](screenshots/screenshot-3.png)
