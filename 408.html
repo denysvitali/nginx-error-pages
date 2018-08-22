@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/_errors/main.css"/>
-	<title>Error 408 - %{HOSTNAME}</title>
+	<title>Error %ERROR_CODE% - %{HOSTNAME}</title>
 	<style>
 		html{
 			background-color: #e74c3c;
@@ -17,7 +17,7 @@
 <body>
 <div class="error-middle">
 	<h1>Error 408 - Request Timeout</h1>
-	<p>The server timed out waiting for the request.</p>
+	<p>The 408 (Request Timeout) status code indicates that the server did not receive a complete request message within the time that it was prepared to wait. A server SHOULD send the "close" connection option in the response, since 408 implies that the server has decided to close the connection rather than continue waiting. If the client has an outstanding request in transit, the client MAY repeat that request on a new connection.</p>
 </div>
 </body>
 </html>

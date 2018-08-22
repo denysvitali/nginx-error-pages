@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="/_errors/main.css"/>
-	<title>Error 409 - %{HOSTNAME}</title>
+	<title>Error %ERROR_CODE% - %{HOSTNAME}</title>
 	<style>
 		html{
 			background-color: #e74c3c;
@@ -17,7 +17,7 @@
 <body>
 <div class="error-middle">
 	<h1>Error 409 - Conflict</h1>
-	<p>The request cannot be processed because of conflict in the request.</p>
+	<p>The 409 (Conflict) status code indicates that the request could not be completed due to a conflict with the current state of the target resource. This code is used in situations where the user might be able to resolve the conflict and resubmit the request. The server SHOULD generate a payload that includes enough information for a user to recognize the source of the conflict.</p>
 </div>
 </body>
 </html>
