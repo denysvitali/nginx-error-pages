@@ -8,6 +8,8 @@ for i in json["values"]:
     with open(template) as f:
         content = f.read()
         new_content = content
+        if i["value"] == "418":
+            break
         new_content = new_content.replace("$ERROR_CODE", i["value"])
         new_content = new_content.replace("$ERROR_NAME", i["description"])
         new_content = new_content.replace("$ERROR_DESC", i["details"][0]["description"])
