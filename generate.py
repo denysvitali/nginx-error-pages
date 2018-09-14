@@ -8,8 +8,12 @@ for i in json["values"]:
     with open(template) as f:
         content = f.read()
         new_content = content
-        if i["value"] == "418":
-            break
+        error_code = int(i["value"])
+
+        print("Error Code: %d" % (error_code))
+
+        if error_code == 418 or error_code < 300 or error_code > 599:
+            continue
         new_content = new_content.replace("$ERROR_CODE", i["value"])
         new_content = new_content.replace("$ERROR_NAME", i["description"])
         new_content = new_content.replace("$ERROR_DESC", i["details"][0]["description"])
@@ -19,4 +23,6 @@ for i in json["values"]:
 with open("snippets/error_pages_content.conf", "w") as epc:
     for i in json["values"]:
         v = int(i["value"])
+        if v < 300 or v > 599:
+            continue
         print("error_page %d /%d.html;" % (v,v), file=epc)
