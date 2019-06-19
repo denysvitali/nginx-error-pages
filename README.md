@@ -7,6 +7,7 @@ mkdir -p /srv/http/default
 git clone https://github.com/denysvitali/nginx-error-pages /srv/http/default
 mkdir /etc/nginx/snippets/
 ln -s /srv/http/default/snippets/error_pages.conf /etc/nginx/snippets/error_pages.conf
+ln -s /srv/http/default/snippets/error_pages_content.conf /etc/nginx/snippets/error_pages_content.conf
 ```
 Then add to each of your vhosts the following:
 ```
